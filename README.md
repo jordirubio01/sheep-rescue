@@ -7,6 +7,11 @@ In this mini game, the player controls a machine, and has to save sheeps from fa
 
 - In the `Sheep.cs` script, I added a `hasDropped` flag, similar to the existing `hitByHay`. I did this to prevent multiple calls to the `Drop()` method, as previously the drops were being counted twice.
 - I enabled the Audio Source on the Music GameObject so that the soundtrack plays during the game in loop.
+- As time goes on, the sheep spawn faster.
+- The hay machine moves and shoots faster over time.
+- When a sheep falls, it lets out a scream (sourced from https://freesound.org/people/michaelperfect/sounds/710298/).
+- When we save a sheep, you can hear it eating (sourced from https://freesound.org/people/orginaljun/sounds/152313/).
+- When we shoot a hay bale, a straw sound is heard (https://freesound.org/people/sjturia/sounds/370931/).
 
 ## How to Play
 First Way:

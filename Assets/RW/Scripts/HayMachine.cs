@@ -5,10 +5,14 @@ using UnityEngine;
 public class HayMachine : MonoBehaviour
 {
     public Vector3 translationSpeed;
+    public float maxSpeed; // Maximum speed
+    public float increaseRate; // Speed increase
     public float limitX;
     public GameObject hayBalePrefab;
     public Transform haySpawnpoint;
     public float shootInterval;
+    public float minShootInterval; // Minimum time between shots
+    public float decreaseRate; // Time decrease for each shot
     private float shootTimer;
 
     public Transform modelParent;
@@ -66,6 +70,14 @@ public class HayMachine : MonoBehaviour
         {
             shootTimer = shootInterval;
             ShootHay();
+            if (translationSpeed.x < maxSpeed) // Translation speed increases
+            {
+                translationSpeed.x += increaseRate;
+            }
+            if (shootInterval > minShootInterval) // Time interval decreases
+            {
+                shootInterval -= decreaseRate;
+            }
         }
     }
 

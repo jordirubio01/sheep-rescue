@@ -1054,9 +1054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e69df566de805841bab58ee10071f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootClip: {fileID: 8300000, guid: afd9aad0b8c4b1141856b4808d8ea172, type: 3}
-  sheepHitClip: {fileID: 8300000, guid: e97ab3d76ee31794ba31802a0f2a719e, type: 3}
-  sheepDroppedClip: {fileID: 8300000, guid: d396aafd153ba394982f2aa1349363de, type: 3}
+  shootClip: {fileID: 8300000, guid: 8ca41f985ca50ec45a368aa94d986e26, type: 3}
+  sheepHitClip: {fileID: 8300000, guid: cf909af378a2aec4f8ad66312e92c5a3, type: 3}
+  sheepDroppedClip: {fileID: 8300000, guid: 3db4613faf7ffcb4daaf01ebdb2c9d29, type: 3}
 --- !u!1 &1807735485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6020313712292669828, guid: c91d458c12526534eb19d65378204353,
@@ -1076,11 +1076,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translationSpeed: {x: 25, y: 0, z: 0}
+  maxSpeed: 50
+  increaseRate: 0.1
   limitX: 21.7
   hayBalePrefab: {fileID: 6137504706627374822, guid: 35ff9c9cba0538b488bcfc14338b5299,
     type: 3}
   haySpawnpoint: {fileID: 5233456974663517128}
   shootInterval: 0.8
+  minShootInterval: 0.5
+  decreaseRate: 0.005
   modelParent: {fileID: 5233456974663517129}
   blueModelPrefab: {fileID: 5233456973075758890, guid: 5c5170d876533ae43bc2e4b15c8e6f6e,
     type: 3}
@@ -1125,6 +1129,8 @@ MonoBehaviour:
   - {fileID: 1916095201}
   - {fileID: 362405674}
   timeBetweenSpawns: 2
+  minSpawnTime: 0.7
+  decreaseRate: 0.05
 --- !u!4 &1823895960
 Transform:
   m_ObjectHideFlags: 0

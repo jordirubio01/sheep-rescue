@@ -8,6 +8,8 @@ public class SheepSpawner : MonoBehaviour
     public GameObject sheepPrefab;
     public List<Transform> sheepSpawnPositions = new List<Transform>();
     public float timeBetweenSpawns;
+    public float minSpawnTime; // Minimum time between spawns
+    public float decreaseRate; // Time decrease for each spawn
     private List<GameObject> sheepList = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -38,6 +40,11 @@ public class SheepSpawner : MonoBehaviour
         {
             SpawnSheep();
             yield return new WaitForSeconds(timeBetweenSpawns);
+
+            if (timeBetweenSpawns > minSpawnTime) // Time decreases
+            {
+                timeBetweenSpawns -= decreaseRate;
+            }
         }
     }
 

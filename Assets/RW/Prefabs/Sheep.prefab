@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 10
+  maxRunSpeed: 50
+  increaseRate: 10
   gotHayDestroyDelay: 1
   dropDestroyDelay: 4
   heartOffset: 4

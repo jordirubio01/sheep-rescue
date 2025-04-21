@@ -17,3 +17,6 @@ First Way:
 Second Way:
 1. Download the Builds folder.
 2. Run sheep-rescue.exe.
+
+How the game should look like:
+![image](https://github.com/user-attachments/assets/029abeab-0db6-469c-a08c-5bd9b1238b80)
